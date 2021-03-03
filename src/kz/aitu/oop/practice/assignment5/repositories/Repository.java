@@ -218,4 +218,40 @@ public class Repository implements IRepository {
         }
         return null;
     }
+
+    @Override
+    public int ShowSumSalaryBackendDeveloper() {
+        Connection connection = null;
+        try {
+            connection = idbManager.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(" SELECT SUM(salary) FROM employee where department='BackendDeveloper'" );
+            preparedStatement.executeQuery();
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+
+            }
+            return resultSet.getInt("sum");}
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    @Override
+    public int ShowSumSalaryFrontendDeveloper() {
+        Connection connection = null;
+        try {
+            connection = idbManager.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(" SELECT SUM(salary) FROM employee where department='FrontendDeveloper'" );
+            preparedStatement.executeQuery();
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+
+            }
+            return resultSet.getInt("sum");}
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

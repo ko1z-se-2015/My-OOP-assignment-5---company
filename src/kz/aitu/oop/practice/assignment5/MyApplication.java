@@ -22,9 +22,11 @@ public class MyApplication {
                     "4)Add employee in FrontendDeveloper \n " +
                     "5)Add employee in BackendDeveloper\n " +
                     "6)Remove employee by ID\n " +
-                            "7)Show all employee in FrontendDeveloper\n "+
+                    "7)Show all employee in FrontendDeveloper\n "+
                     "8)Show all employee in BackendDeveloper\n "+
-                    "9)Stop choosing");
+                    "9)Show the salary costs of Backend developers\n "+
+                    "10)Show the salary costs of Frontend developers\n "+
+                    "11)Stop choosing");
             int number = scanner.nextInt();
             if (number == 1) {
                 System.out.println("Write the name of employee:");
@@ -79,6 +81,11 @@ public class MyApplication {
             }else if(number == 8){
                 System.out.println(controller.ShowAllBackend());
             }else if(number == 9){
+                System.out.println(controller.ShowSumMoneyBackend());
+            }else if(number == 10) {
+                System.out.println(controller.ShowSumMoneyFrontend());
+            }
+            else if(number == 11){
                 System.out.println("Bye");
                 break;
             }

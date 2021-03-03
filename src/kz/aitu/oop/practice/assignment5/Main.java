@@ -13,7 +13,6 @@ public class Main {
         IRepository iMedRepository = new Repository(iManager);
         Controller controller = new Controller(iMedRepository);
         MyApplication myApplication = new MyApplication(controller);
-
         myApplication.Start();
 
     }

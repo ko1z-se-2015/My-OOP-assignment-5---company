@@ -17,5 +17,6 @@ public interface IRepository {
     public ArrayList<BackendDeveloper> SearchEmployeeByNameBackend(String name);
     public boolean addBackend(BackendDeveloper backendDeveloper);
     public ArrayList<BackendDeveloper> ShowAllBackend();
-
+    public int ShowSumSalaryBackendDeveloper();
+    public int ShowSumSalaryFrontendDeveloper();
 }

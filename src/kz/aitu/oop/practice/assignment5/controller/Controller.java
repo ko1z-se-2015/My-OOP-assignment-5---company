@@ -70,5 +70,13 @@ public class Controller {
         String res = iRepository.ShowAllBackend().toString();
         return  res;
     }
+    public String ShowSumMoneyBackend(){
+        String res = String.valueOf(iRepository.ShowSumSalaryBackendDeveloper());
+        return res;
+    }
+    public String ShowSumMoneyFrontend(){
+        String res = String.valueOf(iRepository.ShowSumSalaryFrontendDeveloper());
+        return res;
+    }
 
 }
