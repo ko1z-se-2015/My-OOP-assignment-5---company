@@ -86,7 +86,7 @@ public class MyApplication {
                 System.out.println(controller.ShowSumMoneyFrontend());
             }
             else if(number == 11){
-                System.out.println("Bye!");
+                System.out.println("Bye!!");
                 break;
             }
             else {
